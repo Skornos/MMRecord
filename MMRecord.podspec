@@ -16,6 +16,10 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.8'
   s.osx.frameworks = 'CoreData'
   
+  s.pod_target_xcconfig = {
+    'GCC_NO_COMMON_BLOCKS' => 'NO',
+  }
+  
   s.subspec 'Core' do |core|
     core.source_files = 'Source/MMRecord/*.{h,m}'
   end
